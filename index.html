@@ -66,7 +66,8 @@
         <div class="hero-main-bg section">
           <div class="container">
             <h1 class="headline-primary">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-            <button class="button-headline" type="button">Zamów usługe</button>
+            <button class="button-headline" type="button" data-modal-open>Zamów usługe</button>
+            <div class="modal is-hidden" data-modal><button data-modal-close>X</button></div>
           </div>
         </div>
       </section>
@@ -136,25 +137,34 @@
         <div class="container">
           <h2 class="headline-secondary">Czym się zajmujemy</h2>
           <ul class="whatwedo-list">
-            <li>
-              <img src="./images/main1.jpg" width="370" height="294" alt="Kodowanie programu" />
-            </li>
-            <li>
-              <img
-                src="./images/main2.jpg"
-                width="370"
-                height="294"
-                alt="Testowanie aplikacji mobilnej"
-              />
-            </li>
-            <li>
-              <img
-                src="./images/main3.jpg"
-                width="370"
-                height="294"
-                alt="Projektowanie stron internetowych"
-              />
-            </li>
+            <div class="whatwedo-items">
+              <li>
+                <p class="whatwedo-box">Aplikacje komputerowe</p>
+                <img src="./images/main1.jpg" width="370" height="294" alt="Kodowanie programu" />
+              </li>
+            </div>
+            <div class="whatwedo-items">
+              <li>
+                <p class="whatwedo-box">Aplikacje mobilne</p>
+                <img
+                  src="./images/main2.jpg"
+                  width="370"
+                  height="294"
+                  alt="Testowanie aplikacji mobilnej"
+                />
+              </li>
+            </div>
+            <div class="whatwedo-items">
+              <li>
+                <p class="whatwedo-box">Rozwiązania graficzne</p>
+                <img
+                  src="./images/main3.jpg"
+                  width="370"
+                  height="294"
+                  alt="Projektowanie stron internetowych"
+                />
+              </li>
+            </div>
           </ul>
         </div>
       </section>
@@ -369,5 +379,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

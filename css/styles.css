@@ -7,6 +7,7 @@
   --background-box-secondary: #f5f4fa;
   --background-button: #2196f3;
   --background-button-footer: rgba(255, 255, 255, 0.1);
+  --background-whatwedo-items: rgba(47, 48, 58, 0.8);
   --text-color-primary: #212121;
   --text-color-secondary: #757575;
   --text-color-blue: #2196f3;
@@ -112,7 +113,14 @@ body {
 .link-navi:focus {
   color: var(--text-color-blue);
 }
-
+.test-kreska {
+  border-radius: 2px;
+  background-color: var(--background-button);
+  width: 53px;
+  height: 4px;
+}
+/* .link-navi::after { 
+  content: "  " } */
 /* SEKCJA HERO */
 .hero-main {
   background-color: var(--background-box-primary);
@@ -152,6 +160,32 @@ body {
   padding: 10px 41px;
   margin-top: 30px;
 }
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) scale(0);
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  left: 536px;
+  top: 221px;
+  background-color: var(--background-page-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1;
+}
+.backdrop {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  width: 1600px;
+  height: 1024px;
+  left: 0px;
+  top: 0px;
+}
 /* NASZE ATUTY */
 .asset {
   display: flex;
@@ -183,6 +217,30 @@ body {
 .clients-icons {
   display: flex;
   gap: 30px;
+}
+.whatwedo-items {
+  position: relative;
+  display: inline-flex;
+  width: 370px;
+  height: 294px;
+}
+.whatwedo-box {
+  position: absolute;
+  z-index: 1;
+  background-color: var(--background-whatwedo-items);
+  text-transform: uppercase;
+  color: var(--text-color-light);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  width: 370px;
+  height: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* SEKCJA NASZ ZESPÓŁ */
 .team-list {
