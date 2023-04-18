@@ -102,6 +102,9 @@ body {
 .link-contact:focus {
   color: var(--text-color-blue);
   fill: var(--icon-color-blue);
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-navi {
   color: var(--text-color-primary);
@@ -112,12 +115,25 @@ body {
 .link-navi:hover,
 .link-navi:focus {
   color: var(--text-color-blue);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.test-kreska {
+.link-navi-active {
+  position: relative;
+  display: block;
+  color: var(--background-button);
+}
+
+.link-navi-active::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  top: 45px;
+  left: 0;
+  right: 0;
   border-radius: 2px;
   background-color: var(--background-button);
-  width: 53px;
-  height: 4px;
 }
 /* .link-navi::after { 
   content: "  " } */
@@ -160,6 +176,7 @@ body {
   padding: 10px 41px;
   margin-top: 30px;
 }
+/* TESTY!!! */
 .is-hidden {
   pointer-events: none;
   visibility: hidden;
@@ -185,6 +202,11 @@ body {
   height: 1024px;
   left: 0px;
   top: 0px;
+}
+.close-button {
+  background-color: var(--background-page-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 /* NASZE ATUTY */
 .asset {
@@ -286,6 +308,9 @@ body {
 .team-icons-items:focus {
   fill: var(--text-color-light);
   background-color: var(--background-button);
+  transition-property: fill, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons-items {
@@ -312,6 +337,9 @@ body {
 .clients-icons-items:focus {
   border-color: var(--border-icon-blue);
   fill: var(--icon-color-blue);
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* SEKCJA STOPKA */
@@ -376,6 +404,9 @@ body {
 .footer-icons-items:hover,
 .footer-icons-items:focus {
   background-color: var(--icon-color-blue);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icons-items {
@@ -412,6 +443,9 @@ body {
   background: var(--background-button);
   color: var(--text-color-light);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-por {
   display: flex;
@@ -439,3 +473,4 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+/* TESTY LINKI NAVI */
