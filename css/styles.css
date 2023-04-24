@@ -8,6 +8,7 @@
   --background-button: #2196f3;
   --background-button-footer: rgba(255, 255, 255, 0.1);
   --background-whatwedo-items: rgba(47, 48, 58, 0.8);
+  --background-list-main-por: rgba(33, 150, 243, 0.9);
   --text-color-primary: #212121;
   --text-color-secondary: #757575;
   --text-color-blue: #2196f3;
@@ -135,8 +136,6 @@ body {
   border-radius: 2px;
   background-color: var(--background-button);
 }
-/* .link-navi::after { 
-  content: "  " } */
 /* SEKCJA HERO */
 .hero-main {
   background-color: var(--background-box-primary);
@@ -395,12 +394,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* .footer-icons :hover,
-.footer-icons :focus {
-  fill: var(--text-color-light);
-  background-color: var(--background-button);
-  border-radius: 50%;
-} */
+
 .footer-icons-items:hover,
 .footer-icons-items:focus {
   background-color: var(--icon-color-blue);
@@ -472,5 +466,34 @@ body {
 .list-main-por:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.boxtest {
+  position: relative;
+  overflow: hidden;
+  /* margin: 0;
+  width: 370px;
+height: 294px; */
+}
+.overlaytest {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-list-main-por);
+  color: var(--text-color-light);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 49px 45px 49px 24px;
+  transform: translateY(-100%);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.boxtest:hover .overlaytest,
+.boxtest:focus .overlaytest {
+  transform: translateY(0);
 }
 /* TESTY LINKI NAVI */
