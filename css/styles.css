@@ -9,6 +9,7 @@
   --background-button-footer: rgba(255, 255, 255, 0.1);
   --background-whatwedo-items: rgba(47, 48, 58, 0.8);
   --background-list-main-por: rgba(33, 150, 243, 0.9);
+  --background-modal: rgba(47, 48, 58, 0.4);
   --text-color-primary: #212121;
   --text-color-secondary: #757575;
   --text-color-blue: #2196f3;
@@ -180,32 +181,52 @@ body {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transform: translateX(-50%) translateY(-50%) scale(0);
 }
 .modal {
   position: absolute;
   width: 528px;
   height: 581px;
-  left: 536px;
-  top: 221px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.2s ease-in;
   background-color: var(--background-page-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  z-index: 1;
+}
+.is-hidden .modal {
+  transform: scale(0);
 }
 .backdrop {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.2);
-  width: 1600px;
-  height: 1024px;
-  left: 0px;
-  top: 0px;
+  position: fixed;
+  background: var(--background-modal);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 .close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  color: var(--text-color-primary);
   background-color: var(--background-page-color);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 8px;
+}
+.close-button:hover,
+.close-button:focus {
+  background-color: var(--background-button);
+  fill: var(--icon-color-light);
+  transition-property: color fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* NASZE ATUTY */
 .asset {
@@ -298,7 +319,6 @@ body {
 .team-icons {
   display: flex;
   gap: 10px;
-  /* background-color: #757575; */
   fill: var(--icon-color);
   padding: 16px 32px 30px;
 }
