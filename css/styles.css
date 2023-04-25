@@ -468,14 +468,14 @@ body {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.boxtest {
+.box-main-por {
   position: relative;
   overflow: hidden;
   /* margin: 0;
   width: 370px;
 height: 294px; */
 }
-.overlaytest {
+.overlay-main-por {
   position: absolute;
   top: 0;
   left: 0;
@@ -487,13 +487,13 @@ height: 294px; */
   font-weight: 400;
   line-height: 1.5;
   padding: 49px 45px 49px 24px;
-  transform: translateY(-101%);
+  transform: translateY(101%);
   transition: transform 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.boxtest:hover .overlaytest,
-.boxtest:focus .overlaytest {
+.box-main-por:hover .overlay-main-por,
+.box-main-por:focus .overlay-main-por {
   transform: translateY(0);
 }
 /* TESTY LINKI NAVI */
