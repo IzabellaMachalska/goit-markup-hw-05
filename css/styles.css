@@ -490,7 +490,10 @@ body {
   padding: 4px 24px 20px;
 }
 .list-main-por {
+  /* position: relative; */
+  /* background-color: var(--background-page-color); */
   border: 1px solid var(--border-bottom-color-main-por);
+  
 }
 .list-main-por:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
