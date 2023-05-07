@@ -144,13 +144,15 @@ body {
 .hero-main-bg {
   padding: 200px 0;
   text-align: center;
-
   background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/main8.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px, cover;
+  background-size: 1600px;
   width: 100%;
+}
+.inside {
+  padding: 200px 0;
 }
 .headline-primary {
   color: var(--text-color-light);
